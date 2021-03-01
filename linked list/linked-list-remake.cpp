@@ -44,6 +44,7 @@ void addEnd(node **head);
 void deleteData(node **head);
 void deleteEnd(node **head);
 void printReversed(node *head);
+void countNodes(node *head);
 
 // will run while closing this app.
 void deleteList(node *head);
@@ -105,6 +106,12 @@ int main(int argc, char const *argv[])
 				goto Opties;
 				break;
 			
+			case 8:
+				countNodes(head);
+				printf("\n");
+				goto Opties;
+				break;
+			
 			default:
 				goto Exit;
 				break;
@@ -126,7 +133,8 @@ int appMenu() {
 	printf("5. Hapus data di akhir list\n");
 	printf("6. Cetak dengan reversi\n");
 	printf("7. Cetak isi list\n");
-	printf("Masukkan Pilihan [Pilih 1 s.d. 7] : ");
+	printf("8. Cetak panjang list\n");
+	printf("Masukkan Pilihan [Pilih 1 s.d. 8] : ");
 	// fflush(stdin);
 	scanf("%d", &option);
 
@@ -315,6 +323,18 @@ void printReversed(node *head) {
 	
 	// head = previousPointer;
 	// return head;
+}
+
+void countNodes(node *head) {
+	node *walkerPointer;
+	int length = 0;
+	walkerPointer = head;
+	printf("\n");
+	while (walkerPointer != NULL) {
+		length++;
+		walkerPointer = walkerPointer->next;
+	}
+	printf("%d\n", length);
 }
 
 // ============= APPLICATION CLOSING ==================
