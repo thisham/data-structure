@@ -18,6 +18,7 @@ void insertNode(node **head, node *pPre, node *pNew);
 void deleteNode(node **head, node *pPre, node *pCur);
 void hapusData(node **head);
 void deleteList(node *head);
+void addAtLast(node **head, node *pPre);
 
 //========================================================
 
@@ -30,7 +31,7 @@ int main()
   do{
     //untuk membersihkan tampilan
     //untuk windows
-    system("cls");
+   //  system("cls");
     //untuk linux
      //system("clear");
      
@@ -50,7 +51,7 @@ int main()
      		hapusData(&head);
      else if (pilih == '4'){
      		tranverse(head);
-         getch();
+         // getch();
      }
   } while (pilih != 'q');
   deleteList(head);
@@ -67,13 +68,13 @@ node *createNode(void){
 
 //========================================================
 
-void tambahAwal(node **head){
+void  tambahAwal(node **head){
   int bil;
   node *pTemp;
 
   //untuk membersihkan tampilan
   //untuk windows
-  system("cls");
+//   system("cls");
   //untuk linux
   //system("clear");
   fflush(stdin);
@@ -89,7 +90,7 @@ void tambahAwal(node **head){
   }
   else{
       printf("Alokasi memori gagal");
-      getch();
+      // getch();
   }
 }
 
@@ -101,7 +102,7 @@ void tambahData(node **head){
 
   //untuk membersihkan tampilan
   //untuk windows
-  system("cls");
+//   system("cls");
   //untuk linux
   //system("clear");
   
@@ -122,11 +123,11 @@ void tambahData(node **head){
 
   if (pCur == NULL){
      printf("\nnode tidak ditemukan");
-     getch();
+   //   getch();
   }
   else if (pTemp == NULL){
      printf("\nalokasi memeori gagal");
-     getch();
+   //   getch();
   }
   else{
      pTemp->data = bil;
@@ -141,7 +142,7 @@ void tranverse(node *head){
    //traverse linked list
 	node *pWalker;
 
-    system("cls");
+   //  system("cls");
 	pWalker = head;
 	while (pWalker != NULL){
    	printf("%d->", pWalker -> data);
@@ -184,7 +185,7 @@ void hapusData(node **head)
   node *pCur, *pPre;
 
   //clrscr();
-  system("cls");
+//   system("cls");
   tranverse(*head);
   printf("\nData yang akan dihapus : ");
   fflush(stdin);
@@ -200,7 +201,7 @@ void hapusData(node **head)
 
   if (pCur == NULL){
      printf("\nnode tidak ditemukan");
-     getch();
+   //   getch();
   }
   else
      deleteNode(head, pPre, pCur);
@@ -219,4 +220,6 @@ void deleteList(node *head){
   }
 }
 
+//========================================================
 
+void 
