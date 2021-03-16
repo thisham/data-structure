@@ -16,6 +16,7 @@
  * 			- Tambah data di akhir list;
  * 			- Hapus data di akhir list;
  * 			- Cetak dengan reversi (pembalikan);
+ *			- Hitung jumlah node.
  * 
  */
 
