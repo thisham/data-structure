@@ -9,13 +9,13 @@ using namespace std;
  * Forked repo: https://github.com/thisham/data-structure.git
  * 
  * Mahasiswa :
- * 		Hamdan Yuwafi Mastu Wijaya
- * 		(19081010092 - Struktur Data B)
+ *      Hamdan Yuwafi Mastu Wijaya
+ *      (19081010092 - Struktur Data B)
  * 
  * Riwayat Perubahan :
- * 		- Penulisan ulang source-code;
- * 		- Melengkapi fitur:
- * 			- Pop;
+ *      - Penulisan ulang source-code;
+ *      - Melengkapi fitur:
+ *          - Pop;
  *          - Element Amount;
  *          - Element Search;
  *          - Sum of Element;
