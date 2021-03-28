@@ -29,14 +29,14 @@ struct node
     int data;
     node *next;
 };
-typedef node Node;
+typedef node node;
 
 struct stack
 {
     int count;
     node *top;
 };
-typedef stack Stack;
+typedef stack stack;
 
 class Operation
 {
@@ -118,6 +118,7 @@ class Operation
             if (checker == NULL) 
                 reason = "Stack is full!";
             cout << reason << endl;
+            delete checker;
         }
 
         void print() {
