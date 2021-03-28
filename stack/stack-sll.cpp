@@ -163,7 +163,7 @@ class Main
             Operation useStack;
             switch (choice) {
                 case 1: 
-                    data = getData();
+                    data = this->getData();
                     this->stackData = useStack.from(this->stackData).push(data);
                     this->isSuccess((this->stackData.count > counter));
                     break;
